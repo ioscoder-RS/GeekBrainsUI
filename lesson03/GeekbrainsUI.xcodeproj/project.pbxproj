@@ -20,6 +20,9 @@
 		9164FD3A23954DBA0089EE2F /* tol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9164FD3923954DBA0089EE2F /* tol.swift */; };
 		9164FD3F239567EC0089EE2F /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9164FD3E239567EC0089EE2F /* user.swift */; };
 		9164FD41239569DB0089EE2F /* Group_vk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9164FD40239569DB0089EE2F /* Group_vk.swift */; };
+		91A97D772396A07900015775 /* GroupList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A97D762396A07900015775 /* GroupList.swift */; };
+		91A97D7B2396A62700015775 /* NewGroupList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A97D7A2396A62700015775 /* NewGroupList.swift */; };
+		91A97D7D2396B07F00015775 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A97D7C2396B07F00015775 /* GroupCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		9164FD3923954DBA0089EE2F /* tol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tol.swift; sourceTree = "<group>"; };
 		9164FD3E239567EC0089EE2F /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		9164FD40239569DB0089EE2F /* Group_vk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group_vk.swift; sourceTree = "<group>"; };
+		91A97D762396A07900015775 /* GroupList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupList.swift; sourceTree = "<group>"; };
+		91A97D7A2396A62700015775 /* NewGroupList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGroupList.swift; sourceTree = "<group>"; };
+		91A97D7C2396B07F00015775 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,9 @@
 				9164FD322393D5AA0089EE2F /* FriendCell.swift */,
 				9164FD342393E33E0089EE2F /* PhotoController.swift */,
 				9164FD3623952D280089EE2F /* BarButtonItem_Add.swift */,
+				91A97D762396A07900015775 /* GroupList.swift */,
+				91A97D7A2396A62700015775 /* NewGroupList.swift */,
+				91A97D7C2396B07F00015775 /* GroupCell.swift */,
 			);
 			path = GeekbrainsUI;
 			sourceTree = "<group>";
@@ -177,9 +186,12 @@
 			files = (
 				9164FD3723952D280089EE2F /* BarButtonItem_Add.swift in Sources */,
 				915B9DAB2389B93800944194 /* ViewController.swift in Sources */,
+				91A97D7B2396A62700015775 /* NewGroupList.swift in Sources */,
 				915B9DA72389B93800944194 /* AppDelegate.swift in Sources */,
 				9164FD3A23954DBA0089EE2F /* tol.swift in Sources */,
+				91A97D772396A07900015775 /* GroupList.swift in Sources */,
 				915B9DA92389B93800944194 /* SceneDelegate.swift in Sources */,
+				91A97D7D2396B07F00015775 /* GroupCell.swift in Sources */,
 				9164FD3F239567EC0089EE2F /* user.swift in Sources */,
 				9164FD352393E33E0089EE2F /* PhotoController.swift in Sources */,
 				9164FD312393C92B0089EE2F /* FriendList.swift in Sources */,

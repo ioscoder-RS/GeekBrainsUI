@@ -11,8 +11,6 @@
 //Добавить на все контроллеры прототипы ячеек.
 //На первой вкладке UITableViewController должен отображать список друзей пользователя. В прототипе ячеек должна быть текстовая надпись с именем друга и изображением с его аватаркой.
 //UICollectionViewController должен отображать фото выбранного друга. Соответственно, в прототипе ячейки должно быть изображение.
-//На второй вкладке UITableViewController должен отображать группы пользователя. Прототип должен содержать текстовую надпись для имени группы и изображение для ее аватарки.
-//Второй UITableViewController будет отображать группы, в которых пользователь не состоит. В будущем мы добавим возможность поиска сообщества по названию. Ячейки должны использоваться такие же, как и на прошлом контроллере.
 //Создать папку Model, а в ней — файлы содержащие struct, или class, описывающий профиль пользователя, — User, группу «ВКонтакте» — Group.
 //Подготовить массивы демонстрационных данных, отобразить эти данные на соответствующих им экранах.
 //Реализовать добавление и удаление групп пользователя.
@@ -63,7 +61,7 @@ class FriendList: UITableViewController {
        let username = friendList[indexPath.row]
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(identifier: "PhotoController") as! PhotoController
-        viewController.user = username
+        viewController.user_ = username
     self.navigationController?.pushViewController(viewController, animated: true)
     }
 

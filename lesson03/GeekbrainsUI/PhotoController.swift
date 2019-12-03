@@ -7,7 +7,7 @@ private let reuseIdentifier = "Photo"
 class PhotoController: UICollectionViewController {
 
     var photoCollection = [1] //всегда одна фотография выводится
-    var user:String? //имя пользователя, пришедшее с пред. экрана
+    var user_:String? //имя пользователя, пришедшее с пред. экрана
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +23,12 @@ class PhotoController: UICollectionViewController {
       
         //хулиганство - присваиваю пользователю NewUser5, NewUser6,...NewUserX текст NewUser и иконку с названием NewUser. Другим пользователям - иконку с названием равным имени пользователя
         var ls_defaultusername:String=""
-        if user!.hasPrefix("NewUser") == true{
+        if user_!.hasPrefix("NewUser") == true{
             //получается дефолтная иконка NewUser.jpg
         ls_defaultusername = "NewUser"
         }
         else{
-        ls_defaultusername = user!
+        ls_defaultusername = user_!
         }
         
         cell.cell_username.text = ls_defaultusername
