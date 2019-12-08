@@ -21,23 +21,30 @@ class PhotoController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Photo", for: indexPath) as! PhotoCell
       
-        //хулиганство - присваиваю пользователю NewUser5, NewUser6,...NewUserX текст NewUser и иконку с названием NewUser. Другим пользователям - иконку с названием равным имени пользователя
-        var ls_defaultusername:String=""
-        if user_!.hasPrefix("NewUser") == true{
-            //получается дефолтная иконка NewUser.jpg
-        ls_defaultusername = "NewUser"
-        }
-        else{
-        ls_defaultusername = user_!
+      var ls_defaultusername:String?
+        
+       ls_defaultusername = user_
+      
+        if let imageToLoad = ls_defaultusername {
+        //Либо находим в Assets файл с именем imageToLoad или подставляем default картинку
+           if (UIImage(named: "\(imageToLoad)") != nil) {
+             cell.photo.image = UIImage(named: "\(imageToLoad).jpg")
+           }
+           else {
+             cell.photo.image = UIImage(named: "NewUser.jpg")
+           }
+            cell.cell_username.text = imageToLoad
         }
         
-        cell.cell_username.text = ls_defaultusername
-        cell.photo.image = UIImage(named: "\(ls_defaultusername).jpg")
 
         return cell
     }
  
- 
+    @IBAction func likeButtonPressed(_ sender: Any) {
+     (sender as! LikeButton).like()
+    }
+    
+    
 }// class PhotoController
 
 class PhotoCell: UICollectionViewCell {
@@ -45,4 +52,7 @@ class PhotoCell: UICollectionViewCell {
     @IBOutlet weak var photo: UIImageView!
     @IBOutlet weak var cell_username: UILabel!
    
+
+      
+
 }
