@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BarButtonItem_Add: UIBarButtonItem {
+class BarButtonItemAdd: UIBarButtonItem {
     
 
     }

@@ -29,7 +29,8 @@ class ViewController: UIViewController, UITextFieldDelegate //для фокус�
         view.endEditing(true)
     }
     
-    @IBAction func Reg_pressed(_ sender: Any) {
+
+    @IBAction func RegPressed(_ sender: Any) {
         // Создаем контроллер
         let alert = UIAlertController(title: "Ошибка", message: "Регистрация будет доступна в след. версиях", preferredStyle: .alert)
         // Создаем кнопку для UIAlertController

@@ -58,11 +58,11 @@ class FriendList: UITableViewController {
             return UITableViewCell()
         }
         
-        var ls_indexrow:String?
+        var indexRow:String?
        
-        ls_indexrow = friendsSection[indexPath.section].items[indexPath.row].userName
+        indexRow = friendsSection[indexPath.section].items[indexPath.row].userName
         
-        if let imageToLoad = ls_indexrow {
+        if let imageToLoad = indexRow {
         cell.username.text = imageToLoad
             
          //Либо находим в Assets файл с именем imageToLoad или подставляем default картинку
@@ -93,14 +93,15 @@ class FriendList: UITableViewController {
         let username = friendsSection[indexPath.section].items[indexPath.row].userName
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(identifier: "PhotoController") as! PhotoController
-        viewController.user_ = username
+        viewController.inputUser = username
     self.navigationController?.pushViewController(viewController, animated: true)
     }
 
-    //Добавляем по кнопке новый элемент в массив, в конец
+    //Добавляем по кнопке новый элемент в массив
+    
     @IBAction func AddButtonPressed(_ sender: Any) {
-        let l_count: Int = friends.count+1
-        array_append(name: "NewUser\(l_count)")
+        let count: Int = friends.count+1
+        arrayAppend(name: "NewUser\(count)")
     }
     
     //Добавляем ф-л удаления строчки через UITableViewCell.EditingStyle
@@ -108,24 +109,11 @@ class FriendList: UITableViewController {
      {
         if editingStyle == .delete{
     let username = friendsSection[indexPath.section].items[indexPath.row].userName
-            
-    let friend = friendsSection[indexPath.section].items[indexPath.row]
-            
-//          print(friend)
-            
-//            print(friends[1])
-        //    let row =  friends[indexPath.row]
-            
-  //          if let index = friends.firstIndex(of: friend){                friends.removeAll($0 == friend)}
-            
-//            friendsSection = friendsSection.filter{$0 != friend}
-            
- //         friends = friends.filter{$0 != friend}
-            
+                                    
             friends = friends.filter({(Friend) in
                 return Bool(Friend.userName != username)
             })
-
+//перерисовываем отображение в секциях
         initFriendSection()
         tableView.reloadData()
         }
@@ -133,13 +121,15 @@ class FriendList: UITableViewController {
     
    
     
-    func array_append ( name: String){
+    func arrayAppend ( name: String){
+//добавляем запись в исходный массив
         friends.append(Friend(userName:name, avatarPath:"NewUser", isOnline:false))
+//перерисовываем отображение в секциях
         initFriendSection()
         tableView.reloadData()
     }
     
-    func array_delete ( row: Int){
+    func arrayDelete ( row: Int){
         friends.remove(at: row)
         tableView.reloadData()
     }

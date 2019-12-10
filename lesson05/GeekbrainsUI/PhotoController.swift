@@ -7,7 +7,7 @@ private let reuseIdentifier = "Photo"
 class PhotoController: UICollectionViewController {
 
     var photoCollection = [1] //всегда одна фотография выводится
-    var user_:String? //имя пользователя, пришедшее с пред. экрана
+    var inputUser:String? //имя пользователя, пришедшее с пред. экрана
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,11 +21,11 @@ class PhotoController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Photo", for: indexPath) as! PhotoCell
       
-      var ls_defaultusername:String?
+      var defaultUsername:String?
         
-       ls_defaultusername = user_
+       defaultUsername = inputUser
       
-        if let imageToLoad = ls_defaultusername {
+        if let imageToLoad = defaultUsername {
         //Либо находим в Assets файл с именем imageToLoad или подставляем default картинку
            if (UIImage(named: "\(imageToLoad)") != nil) {
              cell.photo.image = UIImage(named: "\(imageToLoad).jpg")
@@ -33,7 +33,7 @@ class PhotoController: UICollectionViewController {
            else {
              cell.photo.image = UIImage(named: "NewUser.jpg")
            }
-            cell.cell_username.text = imageToLoad
+            cell.cellUsername.text = imageToLoad
         }
         
 
@@ -49,10 +49,9 @@ class PhotoController: UICollectionViewController {
 
 class PhotoCell: UICollectionViewCell {
     
-    @IBOutlet weak var photo: UIImageView!
-    @IBOutlet weak var cell_username: UILabel!
-   
-
+    @IBOutlet weak var photo: UIImageView!   
+    @IBOutlet weak var cellUsername: UILabel!
+    
       
 
 }
