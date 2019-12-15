@@ -41,6 +41,7 @@ class LikeButton: UIButton{
     }
     
     private func setLiked(){
+        animateLike(liked: liked)
         likeCount += 1
     //    setImage(UIImage(named: "like"), for: .normal)
         setTitle(String(describing: likeCount), for: .normal)
@@ -48,9 +49,34 @@ class LikeButton: UIButton{
     }
     
     private func disableLike(){
+        animateLike(liked: liked)
         likeCount -= 1
  //       setImage(UIImage(named: "dislike"), for: .normal)
         setTitle(String(describing: likeCount), for: .normal)
          tintColor = .gray
     }
+    
+    func animateLike(liked: Bool){
+      //  bounced-анимация увеличивает размер лайка при нажатии лайка и уменьшает при dislike
+        var localScaleX: CGFloat = 1.0
+        var localScaleY: CGFloat = 1.0
+        
+        if liked {
+            localScaleX = 1.5
+            localScaleY = 1.5
+        } else{
+  localScaleX = 0.75
+   localScaleY = 0.75
+        }
+        
+        UIView.animate(
+                   withDuration: 0.5,
+                   delay: 0,
+                   options: [],
+                   animations:{ self.transform = CGAffineTransform(scaleX: localScaleX, y: localScaleY)},
+                   completion: {_ in UIView.animate(withDuration: 0.5, delay: 0, options: [], animations: {self.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)}
+                       )
+               })
+    }// func animateLike
+    
 }//class LikeButton

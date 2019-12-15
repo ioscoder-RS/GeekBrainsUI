@@ -23,7 +23,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate //для фок
         let HideAction = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         
         view.addGestureRecognizer(HideAction)
+        testAnimation()
     }
+    
+    //функция для анимации
+    func testAnimation() {
+    }
+    
 //функция, убирающая клавиатуру с экрана при нажатии вне текстового поля
     @objc func hideKeyboard(){
         view.endEditing(true)

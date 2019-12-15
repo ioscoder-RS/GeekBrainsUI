@@ -11,4 +11,5 @@ import Foundation
 struct Group{
     var groupName:String
     var avatarPath:String
+    var id: Int
 }

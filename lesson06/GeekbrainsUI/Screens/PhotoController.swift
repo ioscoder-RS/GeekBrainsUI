@@ -6,7 +6,7 @@ private let reuseIdentifier = "Photo"
 
 class PhotoController: UICollectionViewController {
 
-    var photoCollection = [1] //всегда одна фотография выводится
+    var photoCollection = [5] //всегда одна фотография выводится
     var inputUser:String? //имя пользователя, пришедшее с пред. экрана
     
     override func viewDidLoad() {
