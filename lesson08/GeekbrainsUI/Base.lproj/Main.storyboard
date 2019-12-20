@@ -131,7 +131,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1YA-89-ORx" customClass="groupAnimation" customModule="GeekbrainsUI" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1YA-89-ORx" customClass="groupAnimation" customModule="GeekbrainsUI" customModuleProvider="target">
                                         <rect key="frame" x="84" y="441" width="134" height="65"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -179,6 +179,7 @@
                         <outlet property="animationShow" destination="t2H-lX-Eqv" id="I87-1x-KHe"/>
                         <outlet property="animationShow2" destination="1YA-89-ORx" id="lbe-DR-Bd2"/>
                         <outlet property="logo" destination="zeP-uR-4Fz" id="gnV-wV-h8O"/>
+                        <outlet property="scrollView" destination="CUy-l8-qIL" id="ece-DG-28l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

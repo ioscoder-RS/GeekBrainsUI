@@ -100,17 +100,24 @@ class LoginViewController: UIViewController, UITextFieldDelegate //для фок
     }
     
 
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     @IBOutlet weak var animationShow: AnimationApple!
     
-    @IBOutlet weak var animationShow2: AnimationApple!
+    @IBOutlet weak var animationShow2: groupAnimation!
     
     @IBAction func animationButtonPressed(_ sender: Any) {
         if animationShow.isHidden == true{
             animationShow.isHidden = false
-            animationShow2.isHidden = false
+       //     animationShow2.isHidden = false
+           
+            scrollView.drawRectStrokeGroupAnimation(object: Login2, strokeColor: UIColor.green.cgColor,flag: true) //animationShow2.drawRectStrokeGroupAnimation(object: Login2, strokeColor: UIColor.green.cgColor)
+            
         } else{
             animationShow.isHidden = true
-            animationShow2.isHidden = true
+     //       animationShow2.isHidden = true
+            
+           scrollView.drawRectStrokeGroupAnimation(object: Login2, strokeColor: UIColor.green.cgColor,flag: false)
         }
     }
 }//class
