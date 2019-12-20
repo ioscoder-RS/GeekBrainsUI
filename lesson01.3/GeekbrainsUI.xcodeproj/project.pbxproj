@@ -13,6 +13,8 @@
 		915B9DAE2389B93800944194 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 915B9DAC2389B93800944194 /* Main.storyboard */; };
 		915B9DB02389B93C00944194 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 915B9DAF2389B93C00944194 /* Assets.xcassets */; };
 		915B9DB32389B93C00944194 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 915B9DB12389B93C00944194 /* LaunchScreen.storyboard */; };
+		91776A9C239025B20059CE2A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 91776A9B239025B10059CE2A /* Default-568h@2x.png */; };
+		91776A9E239025D80059CE2A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91776A9D239025D80059CE2A /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		915B9DAF2389B93C00944194 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		915B9DB22389B93C00944194 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		915B9DB42389B93C00944194 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91776A9B239025B10059CE2A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		91776A9D239025D80059CE2A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,7 @@
 		915B9D9A2389B93800944194 = {
 			isa = PBXGroup;
 			children = (
+				91776A9B239025B10059CE2A /* Default-568h@2x.png */,
 				915B9DA52389B93800944194 /* GeekbrainsUI */,
 				915B9DA42389B93800944194 /* Products */,
 			);
@@ -63,6 +68,7 @@
 				915B9DAF2389B93C00944194 /* Assets.xcassets */,
 				915B9DB12389B93C00944194 /* LaunchScreen.storyboard */,
 				915B9DB42389B93C00944194 /* Info.plist */,
+				91776A9D239025D80059CE2A /* Images.xcassets */,
 			);
 			path = GeekbrainsUI;
 			sourceTree = "<group>";
@@ -126,6 +132,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				915B9DB32389B93C00944194 /* LaunchScreen.storyboard in Resources */,
+				91776A9E239025D80059CE2A /* Images.xcassets in Resources */,
+				91776A9C239025B20059CE2A /* Default-568h@2x.png in Resources */,
 				915B9DB02389B93C00944194 /* Assets.xcassets in Resources */,
 				915B9DAE2389B93800944194 /* Main.storyboard in Resources */,
 			);
