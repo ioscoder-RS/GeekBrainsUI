@@ -496,8 +496,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
             endingLineNumber = "23"
-            landmarkName = "collectionView(_:cellForItemAt:)"
-            landmarkType = "7">
+            landmarkName = "photos"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -512,8 +512,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "14"
             endingLineNumber = "14"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
+            landmarkName = "INSPhotoViewable"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -616,7 +616,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6BCE1C33-9664-4FC4-B01A-7D5BB7B20E7A"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GeekbrainsUI/UI/CustomNavigationControllerAnimation.swift"
@@ -728,7 +728,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "C1A1224F-85B1-4613-88DC-7FF0A3E5BA6B"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GeekbrainsUI/UI/CustomNavigationControllerAnimation.swift"
@@ -776,7 +776,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "74D8C993-6B9E-454B-9FDA-6326648A5181"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GeekbrainsUI/UI/TransitionAnimations.swift"
@@ -824,7 +824,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6C56AA7B-7267-4B21-8A51-AFE9475EEAA0"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GeekbrainsUI/UI/CustomNavigationControllerAnimation.swift"
@@ -856,7 +856,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "59FEFA89-4832-4000-8987-43B7C39E9866"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GeekbrainsUI/UI/CustomNavigationControllerAnimation.swift"
@@ -868,14 +868,14 @@
             landmarkType = "3">
             <Locations>
                <Location
-                  uuid = "59FEFA89-4832-4000-8987-43B7C39E9866 - 85d3083aa1be0d2d"
-                  shouldBeEnabled = "Yes"
+                  uuid = "59FEFA89-4832-4000-8987-43B7C39E9866 - c1b8873cfb682216"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "GeekbrainsUI.CustomNavigationController.interactiveTransition.getter : GeekbrainsUI.CustomInteractiveTransition"
                   moduleName = "GeekbrainsUI"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/raskin-sa/Desktop/GeekBrains/GeekBrainsUI/GeekbrainsUI/Lesson03/GeekbrainsUI/UI/CustomNavigationControllerAnimation.swift"
+                  urlString = "file:///Users/raskin-sa/GeekBrainsUIRepository/lesson09/GeekbrainsUI/UI/CustomNavigationControllerAnimation.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "33"
@@ -883,14 +883,14 @@
                   offsetFromSymbolStart = "59">
                </Location>
                <Location
-                  uuid = "59FEFA89-4832-4000-8987-43B7C39E9866 - a33eb41f57f67bcd"
-                  shouldBeEnabled = "Yes"
+                  uuid = "59FEFA89-4832-4000-8987-43B7C39E9866 - e7553b190d2054f6"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "GeekbrainsUI.CustomNavigationController.init(navigationBarClass: Swift.Optional&lt;Swift.AnyObject.Type&gt;, toolbarClass: Swift.Optional&lt;Swift.AnyObject.Type&gt;) -&gt; GeekbrainsUI.CustomNavigationController"
                   moduleName = "GeekbrainsUI"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/raskin-sa/Desktop/GeekBrains/GeekBrainsUI/GeekbrainsUI/Lesson03/GeekbrainsUI/UI/CustomNavigationControllerAnimation.swift"
+                  urlString = "file:///Users/raskin-sa/GeekBrainsUIRepository/lesson09/GeekbrainsUI/UI/CustomNavigationControllerAnimation.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "33"
@@ -898,14 +898,14 @@
                   offsetFromSymbolStart = "127">
                </Location>
                <Location
-                  uuid = "59FEFA89-4832-4000-8987-43B7C39E9866 - cae7bfcc9df2c2e8"
-                  shouldBeEnabled = "Yes"
+                  uuid = "59FEFA89-4832-4000-8987-43B7C39E9866 - 8e8c30cac724edd3"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "GeekbrainsUI.CustomNavigationController.init(rootViewController: __C.UIViewController) -&gt; GeekbrainsUI.CustomNavigationController"
                   moduleName = "GeekbrainsUI"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/raskin-sa/Desktop/GeekBrains/GeekBrainsUI/GeekbrainsUI/Lesson03/GeekbrainsUI/UI/CustomNavigationControllerAnimation.swift"
+                  urlString = "file:///Users/raskin-sa/GeekBrainsUIRepository/lesson09/GeekbrainsUI/UI/CustomNavigationControllerAnimation.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "33"
@@ -913,14 +913,14 @@
                   offsetFromSymbolStart = "42">
                </Location>
                <Location
-                  uuid = "59FEFA89-4832-4000-8987-43B7C39E9866 - 3c4d793dfefa6ee"
-                  shouldBeEnabled = "Yes"
+                  uuid = "59FEFA89-4832-4000-8987-43B7C39E9866 - 47af5895853989d5"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "GeekbrainsUI.CustomNavigationController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; GeekbrainsUI.CustomNavigationController"
                   moduleName = "GeekbrainsUI"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/raskin-sa/Desktop/GeekBrains/GeekBrainsUI/GeekbrainsUI/Lesson03/GeekbrainsUI/UI/CustomNavigationControllerAnimation.swift"
+                  urlString = "file:///Users/raskin-sa/GeekBrainsUIRepository/lesson09/GeekbrainsUI/UI/CustomNavigationControllerAnimation.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "33"
@@ -928,14 +928,14 @@
                   offsetFromSymbolStart = "144">
                </Location>
                <Location
-                  uuid = "59FEFA89-4832-4000-8987-43B7C39E9866 - 41f7b2783e46ac1c"
-                  shouldBeEnabled = "Yes"
+                  uuid = "59FEFA89-4832-4000-8987-43B7C39E9866 - 59c3d7e64908327"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "GeekbrainsUI.CustomNavigationController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;GeekbrainsUI.CustomNavigationController&gt;"
                   moduleName = "GeekbrainsUI"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/raskin-sa/Desktop/GeekBrains/GeekBrainsUI/GeekbrainsUI/Lesson03/GeekbrainsUI/UI/CustomNavigationControllerAnimation.swift"
+                  urlString = "file:///Users/raskin-sa/GeekBrainsUIRepository/lesson09/GeekbrainsUI/UI/CustomNavigationControllerAnimation.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "33"
@@ -981,7 +981,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "C937A612-3FC7-40D0-9710-A452303B05F7"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GeekbrainsUI/UI/TransitionAnimations.swift"
@@ -1029,14 +1029,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "B7270EE1-EAA1-46BA-85F3-FA8DD0469706"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GeekbrainsUI/UI/TransitionAnimations.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
             landmarkName = "handleScreenEdgeGesture(_:)"
             landmarkType = "7">
          </BreakpointContent>
