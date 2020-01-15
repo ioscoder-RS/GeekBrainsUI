@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7016B8361086CD43314C2520 /* Pods_GeekbrainsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43A17AD1A88B66A85BCF59A9 /* Pods_GeekbrainsUI.framework */; };
 		9116BAC9239D2607005BF293 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9116BAC8239D2607005BF293 /* LikeButton.swift */; };
 		911E5A6E239A9F73008CD4D6 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E5A6D239A9F73008CD4D6 /* CustomView.swift */; };
 		911E5A70239D08B4008CD4D6 /* CircleShadowImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E5A6F239D08B4008CD4D6 /* CircleShadowImage.swift */; };
@@ -56,6 +57,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12E4120417500C409A3A8933 /* Pods-GeekbrainsUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekbrainsUI.debug.xcconfig"; path = "Target Support Files/Pods-GeekbrainsUI/Pods-GeekbrainsUI.debug.xcconfig"; sourceTree = "<group>"; };
+		43A17AD1A88B66A85BCF59A9 /* Pods_GeekbrainsUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeekbrainsUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9116BAC8239D2607005BF293 /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 		911E5A6D239A9F73008CD4D6 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		911E5A6F239D08B4008CD4D6 /* CircleShadowImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleShadowImage.swift; sourceTree = "<group>"; };
@@ -104,6 +107,7 @@
 		91A97D7A2396A62700015775 /* NewGroupList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGroupList.swift; sourceTree = "<group>"; };
 		91A97D7C2396B07F00015775 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
 		91FA97E723AD13D300B9A053 /* groupAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = groupAnimation.swift; sourceTree = "<group>"; };
+		92D04906607544003BD4910B /* Pods-GeekbrainsUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekbrainsUI.release.xcconfig"; path = "Target Support Files/Pods-GeekbrainsUI/Pods-GeekbrainsUI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,12 +115,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7016B8361086CD43314C2520 /* Pods_GeekbrainsUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05A2090AA30CE54C8F416C5A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43A17AD1A88B66A85BCF59A9 /* Pods_GeekbrainsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81CF8B59D6EC4CBBB86DB3E0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				12E4120417500C409A3A8933 /* Pods-GeekbrainsUI.debug.xcconfig */,
+				92D04906607544003BD4910B /* Pods-GeekbrainsUI.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		911E5A6C239A999F008CD4D6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +183,8 @@
 			children = (
 				915B9DA52389B93800944194 /* GeekbrainsUI */,
 				915B9DA42389B93800944194 /* Products */,
+				81CF8B59D6EC4CBBB86DB3E0 /* Pods */,
+				05A2090AA30CE54C8F416C5A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -250,9 +275,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 915B9DB72389B93C00944194 /* Build configuration list for PBXNativeTarget "GeekbrainsUI" */;
 			buildPhases = (
+				022F74899E4805378087E080 /* [CP] Check Pods Manifest.lock */,
 				915B9D9F2389B93800944194 /* Sources */,
 				915B9DA02389B93800944194 /* Frameworks */,
 				915B9DA12389B93800944194 /* Resources */,
+				F3B9420612F904DD14463364 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -311,6 +338,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		022F74899E4805378087E080 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GeekbrainsUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3B9420612F904DD14463364 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GeekbrainsUI/Pods-GeekbrainsUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GeekbrainsUI/Pods-GeekbrainsUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GeekbrainsUI/Pods-GeekbrainsUI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		915B9D9F2389B93800944194 /* Sources */ = {
@@ -498,6 +567,7 @@
 		};
 		915B9DB82389B93C00944194 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12E4120417500C409A3A8933 /* Pods-GeekbrainsUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -516,6 +586,7 @@
 		};
 		915B9DB92389B93C00944194 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92D04906607544003BD4910B /* Pods-GeekbrainsUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
