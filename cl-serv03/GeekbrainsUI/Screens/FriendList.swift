@@ -9,6 +9,7 @@
 
 
 import UIKit
+import Alamofire
 
 
 struct Section<T>{
@@ -16,43 +17,56 @@ struct Section<T>{
     var items: [T]
 }
 
-//var myFriends: [VKUser] =
-//[VKUser( name: "", surname: "", cityName: "")]
 
+//Преобразование массива скачанного в Web в массив для отображения
 class FriendsDatabase {
     static func getFriends() -> [Friend]{
-//        var myFriends = [Friend]()
-//        
-//        for a in 0...myVKUser.count {
-//            myFriends.append(Friend(userName: myVKUser[a].userName, avatarPath: myVKUser[a].avatarPath, isOnline: myVKUser[a].isOnline, id: myVKUser[a].id, photoArray: myVKUser[a].photoArray ?? [""]))
-//        }
+        var myFriends = [Friend]()
+
+        for a in 0...myVKUser.count-1 {
+            myFriends.append(Friend(userName: myVKUser[a].firstName + " " + myVKUser[a].userName, avatarPath: myVKUser[a].avatarPath, isOnline: myVKUser[a].isOnline, id: myVKUser[a].id))
+        }
         return myFriends
     }
 }
+
+
 
 class FriendList: UITableViewController, UINavigationControllerDelegate {
     
     @IBOutlet weak var searchBar: UISearchBar!
     
-    
-    var friends = FriendsDatabase.getFriends()
-    
+    var vkAPI = VKAPi()
+    var friends = [Friend]()
     var friendsSection = [Section<Friend>]()
  //   var tmpFriend: VKUser? //текущий элемент Друг типа структура, на котором стоим
     var tmpFriend: Friend?
+    //массив фотографий для передачи в PhotoController
+    var photoArray = [VKPhoto]()
+    //получение списк пользователей
+    var tmpVKUser = [VKUser]()
     var selectedFrame: CGRect?
     var customInteractor: CustomInteractor?
     var tmpImage: UIImage? // текущая картинка, на которой стоим
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+             
         searchBar.delegate = self
         
-        initFriendSection()
-    }
+        //Получаем пользователей из Web
+        //в closure перерисовываем tableView -  чтобы только по завершению вывести на экран
+           vkAPI.getFriendList(token: Session.shared.token){
+            self.friends = FriendsDatabase.getFriends()
+               self.initFriendSection()
+            self.tableView.reloadData()
+        }
+    }// override func viewDidLoad()
     
+
     private func initFriendSection(){
+              
         let friendsDictionary = Dictionary.init (grouping: friends){
             $0.userName.prefix(1)
         }
@@ -62,7 +76,9 @@ class FriendList: UITableViewController, UINavigationControllerDelegate {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int{
-        return friendsSection.count
+
+           return friendsSection.count
+//        return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -81,18 +97,20 @@ class FriendList: UITableViewController, UINavigationControllerDelegate {
         indexRow = friendsSection[indexPath.section].items[indexPath.row].avatarPath
         username = friendsSection[indexPath.section].items[indexPath.row].userName
         
-        if let imageToLoad = indexRow {
-            cell.username.text = username
+        
+        cell.username.text = username
+        let url = URL(string: indexRow ?? "")
+        DispatchQueue.global().async {
+            if let data = try? Data(contentsOf: url!) {
+            DispatchQueue.main.async {
+                cell.userimage.image = UIImage(data: data)
+            }
+            } else{
+                cell.userimage.image = UIImage(named: "NewGroup.jpg")
+            }
             
-            //Либо находим в Assets файл с именем imageToLoad или подставляем default картинку
-            if (UIImage(named: "\(imageToLoad)") != nil) {
-                cell.userimage.image = UIImage(named: "\(imageToLoad).jpg")
-            }
-            else {
-                cell.userimage.image = UIImage(named: "NewUser.jpg")
-            }
-            self.tmpImage = cell.userimage.image!
-        }
+        }//DispatchQueue.global().async
+
         return cell
     }
     
@@ -108,9 +126,7 @@ class FriendList: UITableViewController, UINavigationControllerDelegate {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let friendID = friendsSection[indexPath.section].items[indexPath.row].id
-
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-  //      let viewController = storyboard.instantiateViewController(identifier: "FriendsPhotoViewController") as! FriendsPhotoViewController
        let viewController = storyboard.instantiateViewController(identifier: "PhotoController") as! PhotoController
         
         //находим нужный нам элемент массива Friend как структуру и передаем в след. экран
@@ -118,10 +134,15 @@ class FriendList: UITableViewController, UINavigationControllerDelegate {
             tmpFriend = friends[element]
             if tmpFriend!.id == friendID {break} //нашли друга
         }
-        //вызываем CollectionView и передаем туда структуру с выбранным другом
-    viewController.tmpFriend = tmpFriend
-    self.navigationController?.pushViewController(viewController, animated: true)
-    }
+        
+        //заполняем массив фото
+        vkAPI.getPhotosList(token: Session.shared.token, userId: friendID){
+                    //вызываем CollectionView и передаем туда структуру с выбранным другом
+            viewController.tmpFriend = self.tmpFriend
+                viewController.photoArray = myPhotos
+                self.navigationController?.pushViewController(viewController, animated: true)
+                    }
+    }//override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     
     //Добавляем по кнопке новый элемент в массив
     @IBAction func AddButtonPressed(_ sender: Any) {
@@ -158,8 +179,7 @@ class FriendList: UITableViewController, UINavigationControllerDelegate {
         friends.remove(at: row)
         tableView.reloadData()
     }
-    
-    
+        
 }// class FriendList
 
 extension FriendList: UISearchBarDelegate {
@@ -176,39 +196,3 @@ extension FriendList: UISearchBarDelegate {
         view.endEditing(true)
     }
 }
-
-
-
-/*
-         //вызывает экран MusicPlayerViewController
-     //запоминает выбранную (песню = экземпляр структуры) и фрейм
-         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-               self.selectedSong = songs[indexPath.row]
-               let theAttributes:UICollectionViewLayoutAttributes! = collectionView.layoutAttributesForItem(at: indexPath)
-               selectedFrame = collectionView.convert(theAttributes.frame, to: collectionView.superview)
-               self.performSegue(withIdentifier: "Player", sender: self)
-           }
-
-     //вызывает анимацию перехода
- //    We want to create a property that stores the frame of the selected cell.  In the didSelectItem function, we want to modify it a little bit so we grab the cells frame, but specifically the frame of the cell relative to that of the ViewController:
-     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-     guard let frame = self.selectedFrame else { return nil }
-     guard let song = self.selectedSong else { return nil }
-
-  //       Now we have the selectedFrame, and we can access the selected image from our array of songs, we’re finally ready to implement the CustomAnimator. Because we’ve inherited from UINavigationControllerDelegate, we can implement the method that is used to override the default animation.
-     switch operation {
-     case .push:
-          self.customInteractor = CustomInteractor(attachTo: toVC)
-         return CustomAnimator(duration: TimeInterval(UINavigationControllerHideShowBarDuration), isPresenting: true, originFrame: frame, image: song.artwork)
-     default:
-         return CustomAnimator(duration: TimeInterval(UINavigationControllerHideShowBarDuration), isPresenting: false, originFrame: frame, image: song.artwork)
-     }
-     }//func navigationController(_ navigationController: UINavigationController, animationControllerFor operation:
-     
-     
-     func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-         guard let ci = customInteractor else { return nil }
-         return ci.transitionInProgress ? customInteractor : nil
-     }
-
- */

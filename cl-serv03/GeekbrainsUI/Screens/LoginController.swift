@@ -77,7 +77,6 @@ extension VKLoginController: WKNavigationDelegate {
         }
         }
         
-        
         guard let url = navigationResponse.response.url,
         url.path == "/blank.html",
             let fragment = url.fragment else {
@@ -100,28 +99,18 @@ extension VKLoginController: WKNavigationDelegate {
         Session.shared.token = params["access_token"]!
         Session.shared.userId = params["user_id"] ?? "0"
         
-        var friendsLoaded:Bool = false
-        var photosLoaded:Bool = false
-        var groupsLoaded:Bool = false
-        var searchGroupsLoaded:Bool = false
-        
-      //Получение списка друзей
-       vkAPI.getFriendList(token: Session.shared.token){friendsLoaded = true}
-       
-     //Получение фотографий человека
-        vkAPI.getPhotosList(token: Session.shared.token, userId: Session.shared.userId)
-   //     vkAPI.getPhotosList(token: Session.shared.token, userId: "3473904")
-        
        //Получение групп текущего пользователя
-       vkAPI.getGroupsList(token: Session.shared.token, userId: Session.shared.userId){groupsLoaded = true}
+        vkAPI.getGroupsList(token: Session.shared.token, userId: Session.shared.userId){
+            //заглушка
+            let a:Bool
+            a = true
+        }
         
         //Получение групп по поисковому запросу"
     //    vkAPI.searchGroups(token: Session.shared.token, query: "любовь")
         
-   
            decisionHandler(.cancel)
         
-      
         transitionToTabBar()
         
         

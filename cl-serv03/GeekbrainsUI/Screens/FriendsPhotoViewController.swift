@@ -14,23 +14,25 @@ class FriendsPhotoViewController : UIViewController {
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var friendPhoto: UIImageView!
     
-   public var friend : Friend?
+ //  public var friend : Friend?
 //**    public var friend : VKUser?
     public var indexImage: Int?
+    public var indexText: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let indexImage = self.indexImage else{return}
+        guard let indexText = self.indexText else{return}
         
-     if let friend = self.friend {
-        if UIImage(named: "\(friend.photoArray[indexImage]).jpg") != nil{
-            friendPhoto.image = UIImage(named: "\(friend.photoArray[indexImage]).jpg")
+     
+        if UIImage(named: "\(indexImage).jpg") != nil{
+            friendPhoto.image = UIImage(named: "\(indexImage).jpg")
       } else{
                 friendPhoto.image = UIImage(named: "NewUser.jpg")
            }
-          username.text = friend.userName
-     }
-    }
+          username.text = indexText
+     
+    }// viewDidLoad
     
     @IBAction func likeButtonPressed(_ sender: Any) {
          (sender as! LikeButton).like()

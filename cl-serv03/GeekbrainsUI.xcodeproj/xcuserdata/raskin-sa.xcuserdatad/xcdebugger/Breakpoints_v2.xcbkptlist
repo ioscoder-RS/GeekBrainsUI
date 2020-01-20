@@ -142,8 +142,8 @@
             filePath = "GeekbrainsUI/Screens/FriendList.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -183,54 +183,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8A9185CD-4695-4713-B78E-EA195D2FBE18"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GeekbrainsUI/Screens/FriendList.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "initFriendSection()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "8A9185CD-4695-4713-B78E-EA195D2FBE18 - 5fbccb8815081e31"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GeekbrainsUI.FriendList.(initFriendSection in _C269C71C547D8436884BE490946F7E33)() -&gt; ()"
-                  moduleName = "GeekbrainsUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/raskin-sa/Desktop/GeekBrains/GeekBrainsUI/GeekbrainsUI/Lesson03/GeekbrainsUI/Screens/FriendList.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "541">
-               </Location>
-               <Location
-                  uuid = "8A9185CD-4695-4713-B78E-EA195D2FBE18 - 9e8a2dbe1d083587"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #3 (GeekbrainsUI.Section&lt;GeekbrainsUI.Friend&gt;, GeekbrainsUI.Section&lt;GeekbrainsUI.Friend&gt;) -&gt; Swift.Bool in GeekbrainsUI.FriendList.(initFriendSection in _C269C71C547D8436884BE490946F7E33)() -&gt; ()"
-                  moduleName = "GeekbrainsUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/raskin-sa/Desktop/GeekBrains/GeekBrainsUI/GeekbrainsUI/Lesson03/GeekbrainsUI/Screens/FriendList.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "66">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "3C1D4EB4-E18E-41E8-9338-6DD27625E6C4"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -238,8 +190,8 @@
             filePath = "GeekbrainsUI/Screens/FriendList.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
             landmarkName = "AddButtonPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -318,8 +270,8 @@
             filePath = "GeekbrainsUI/Screens/FriendList.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -512,8 +464,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "66"
             endingLineNumber = "66"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "draw(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -528,8 +480,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "49"
             endingLineNumber = "49"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "draw(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -996,129 +948,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A89FD885-7041-4E89-AC72-AB033A91E7E3"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GeekbrainsUI/Screens/FriendList.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "FriendList"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  uuid = "A89FD885-7041-4E89-AC72-AB033A91E7E3 - b04df7e45aa1e648"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GeekbrainsUI.FriendList.tmpFriend.getter : Swift.Optional&lt;GeekbrainsUI.Friend&gt;"
-                  moduleName = "GeekbrainsUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/raskin-sa/Desktop/GeekBrains/GeekBrainsUI/GeekbrainsUI/Lesson03/GeekbrainsUI/Screens/FriendList.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "213">
-               </Location>
-               <Location
-                  uuid = "A89FD885-7041-4E89-AC72-AB033A91E7E3 - 1f6cb39c8348da5c"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GeekbrainsUI.FriendList.tmpFriend.setter : Swift.Optional&lt;GeekbrainsUI.Friend&gt;"
-                  moduleName = "GeekbrainsUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/raskin-sa/Desktop/GeekBrains/GeekBrainsUI/GeekbrainsUI/Lesson03/GeekbrainsUI/Screens/FriendList.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "300">
-               </Location>
-               <Location
-                  uuid = "A89FD885-7041-4E89-AC72-AB033A91E7E3 - 746c12f405bc974f"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GeekbrainsUI.FriendList.tmpFriend.modify : Swift.Optional&lt;GeekbrainsUI.Friend&gt;"
-                  moduleName = "GeekbrainsUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/raskin-sa/Desktop/GeekBrains/GeekBrainsUI/GeekbrainsUI/Lesson03/GeekbrainsUI/Screens/FriendList.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "18">
-               </Location>
-               <Location
-                  uuid = "A89FD885-7041-4E89-AC72-AB033A91E7E3 - 25bfc709c11ae75d"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GeekbrainsUI.FriendList.tmpFriend.modify : Swift.Optional&lt;GeekbrainsUI.Friend&gt; with unmangled suffix &quot;.resume.0&quot;"
-                  moduleName = "GeekbrainsUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/raskin-sa/Desktop/GeekBrains/GeekBrainsUI/GeekbrainsUI/Lesson03/GeekbrainsUI/Screens/FriendList.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  uuid = "A89FD885-7041-4E89-AC72-AB033A91E7E3 - 19f9ba6650899cf1"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GeekbrainsUI.FriendList.init(style: __C.UITableViewStyle) -&gt; GeekbrainsUI.FriendList"
-                  moduleName = "GeekbrainsUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/raskin-sa/Desktop/GeekBrains/GeekBrainsUI/GeekbrainsUI/Lesson03/GeekbrainsUI/Screens/FriendList.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "443">
-               </Location>
-               <Location
-                  uuid = "A89FD885-7041-4E89-AC72-AB033A91E7E3 - b74c6ecefccce43d"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GeekbrainsUI.FriendList.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; GeekbrainsUI.FriendList"
-                  moduleName = "GeekbrainsUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/raskin-sa/Desktop/GeekBrains/GeekBrainsUI/GeekbrainsUI/Lesson03/GeekbrainsUI/Screens/FriendList.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "512">
-               </Location>
-               <Location
-                  uuid = "A89FD885-7041-4E89-AC72-AB033A91E7E3 - 5f9fef678c98b8ab"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GeekbrainsUI.FriendList.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;GeekbrainsUI.FriendList&gt;"
-                  moduleName = "GeekbrainsUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/raskin-sa/Desktop/GeekBrains/GeekBrainsUI/GeekbrainsUI/Lesson03/GeekbrainsUI/Screens/FriendList.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "450">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "3D20429E-E017-466C-90E0-7D6B5266415D"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -1126,8 +955,8 @@
             filePath = "GeekbrainsUI/Screens/PhotoController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "navigationController(_:animationControllerFor:from:to:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1142,8 +971,8 @@
             filePath = "GeekbrainsUI/Screens/PhotoController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "navigationController(_:animationControllerFor:from:to:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1158,8 +987,8 @@
             filePath = "GeekbrainsUI/Screens/PhotoController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "collectionView(_:didSelectItemAt:)"
             landmarkType = "7">
          </BreakpointContent>

@@ -16,7 +16,7 @@ struct GroupVK: Decodable {
     var isAdmin: Int = 0
     var lat: Double = 0.0
     
-
+    
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -49,11 +49,12 @@ class VKAPi {
     let vkURL = "https://api.vk.com/method/"
     
     //https://jsonplaceholder.typicode.com/users
-
-        
+    
+    
     
     //Получение списка друзей
-    func getFriendList(token: String, completion: () -> ())  {
+    func getFriendList(token: String, completed: @escaping () ->())  {
+        let vkURL = "https://api.vk.com/method/"
         let requestURL = vkURL + "friends.get"
         let params = ["v": "5.103",
                       "access_token":token,
@@ -63,60 +64,63 @@ class VKAPi {
         
         Alamofire.request(requestURL,
                           method: .post,
-                          parameters: params).responseData { (response) in
+                          parameters: params).responseData( completionHandler: {(response) in
                             guard let data = response.value else {
                                 return
                             }
-//                            print ("получение списка друзей")
-//                            print(String(bytes: data, encoding: .utf8)!)
                             
                             do {
                                 let response = try JSONDecoder().decode(UserResponse.self, from: data)
-                                  print ("получение списка друзей  через JSONDecoder")
-                              myVKUser = response.response.items
+                                print ("получение списка друзей  через JSONDecoder")
+                                myVKUser = response.response.items
                                 
-                                print(myVKUser)
+                                //  print(myVKUser)
+                                
                             } catch {
                                 print(error)
+                                
                             }
-                            
-        }
+                            completed()
+                          })// complectionHandler
         
+        
+        //       return myVKUser
     }//func getFriendList
     
     //Получение фотографий человека
-    func getPhotosList(token: String, userId: String){
+    func getPhotosList(token: String, userId: Int, completed: @escaping () ->()) {
         let requestURL = vkURL + "photos.get"
         let params = ["v": "5.103",
                       "access_token":token,
-                      "owner_id":userId,
+                      "owner_id":String(userId),
                       "album_id":"wall"
         ]
+        
         
         Alamofire.request(requestURL,
                           method: .post,
                           parameters: params).responseData(completionHandler: { (response) in
                             
-                                guard let data = response.value else {
+                            guard let data = response.value else {
                                 return
                             }
                             do{
                                 let response = try JSONDecoder().decode(PhotosResponse.self, from: data)
                                 print ("Получение фотографий текущего пользователя")
                                 
-                                var myPhotos: [VKPhoto] = response.response.items
+                                myPhotos = response.response.items
                                 print(myPhotos)
+                                
                             } catch{
                                 print (error)
                             }
-                            
+                            completed()
                           })
-        
         
     }//func getPhotosList
     
     //Получение групп текущего пользователя
-    func getGroupsList(token: String, userId: String, completion: () -> ()){
+    func getGroupsList(token: String, userId: String, completed: @escaping () ->()){
         let requestURL = vkURL + "groups.get"
         let params = ["v": "5.103",
                       "access_token":token,
@@ -141,7 +145,7 @@ class VKAPi {
                             } catch{
                                 print (error)
                             }
-
+                            completed()
                             
         }
     }//func getGroupsList

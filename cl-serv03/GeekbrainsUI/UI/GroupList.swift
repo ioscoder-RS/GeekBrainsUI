@@ -10,12 +10,7 @@
 
 import UIKit
 
-//class GroupDatabase {
-//    static func getGroups() -> [VKGroup]{
-//            return myGroup  //возвращает массив групп из Group.Swift
-//        }
-//
-//}
+
 var myGroup:[VKGroup] = [
 VKGroup(id:1, groupName:"", avatarPath:""),
 ] //заполняется в VKApi.swift ф-ция getGroupsList
@@ -40,12 +35,8 @@ class GroupList: UITableViewController, CellImageTapDelegate, ImageViewPresenter
     var customRefreshControl = UIRefreshControl()
     var vkApi = VKAPi()
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         
         addRefreshControl()
         groupSearchBar.delegate = self //чтобы поиск отрабатывал
@@ -73,18 +64,6 @@ class GroupList: UITableViewController, CellImageTapDelegate, ImageViewPresenter
         
         ls_indexrow = myGroup[indexPath.row].groupName
         
-//        if let imageToLoad = ls_indexrow {
-//
-//            cell.groupname.text = imageToLoad
-//
-//            //Либо находим в Assets файл с именем imageToLoad или подставляем default картинку
-//            if (UIImage(named: "\(imageToLoad)") != nil) {
-//                cell.groupimage.image = UIImage(named: "\(imageToLoad).jpg")
-//            }
-//            else {
-//                cell.groupimage.image = UIImage(named: "NewGroup.jpg")
-//            }
-//        }
         
         cell.groupname.text = ls_indexrow
 
@@ -99,7 +78,7 @@ class GroupList: UITableViewController, CellImageTapDelegate, ImageViewPresenter
                 cell.groupimage.image = UIImage(named: "NewGroup.jpg")
             }
             
-        }
+        }//DispatchQueue.global().async 
         
         cell.delegate = self
 

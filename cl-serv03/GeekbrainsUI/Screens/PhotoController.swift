@@ -8,8 +8,8 @@ class PhotoController: UICollectionViewController,  UICollectionViewDelegateFlow
     
   
     var tmpFriend: Friend? //текущий элемент Друг типа структура, на котором стоим
-// var tmpFriend: VKUser?
     var viewClicked: ((UIView)->())? = nil
+    var photoArray: [VKPhoto]?
     
 
     private var selectedFrame: CGRect? = .zero
@@ -25,8 +25,8 @@ class PhotoController: UICollectionViewController,  UICollectionViewDelegateFlow
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // return photoCollection.count
-        guard let tmpcount = tmpFriend?.photoArray.count else {return 1}
-    return tmpcount
+        guard let tmpPhotoarray = photoArray?.count else {return 1}
+    return tmpPhotoarray
        
     }
     
@@ -36,19 +36,25 @@ class PhotoController: UICollectionViewController,  UICollectionViewDelegateFlow
         var imageToLoad: String
         
         guard let defaultUsername = tmpFriend?.userName else {return cell}
-    guard let defaultAvatarPath = tmpFriend?.photoArray[indexPath.row] else {return cell}
+        guard let defaultAvatarPath = photoArray?[indexPath.row] else {return cell}
         
-      imageToLoad = defaultAvatarPath
+//      imageToLoad = defaultAvatarPath
  
             cell.cellUsername.text = defaultUsername
         
-         //Либо находим в Assets файл с именем imageToLoad или подставляем default картинку
-        if (UIImage(named: "\(imageToLoad)") != nil) {
-              cell.photo.image = UIImage(named: "\(imageToLoad).jpg")
-          }
-           else {
-                cell.photo.image = UIImage(named: "NewUser.jpg")
-            }
+        //асинхронная загрузка фотографий из интернета
+        let url = URL(string: defaultAvatarPath.sizes[0].url)
+           DispatchQueue.global().async {
+               if let data = try? Data(contentsOf: url!) {
+               DispatchQueue.main.async {
+                   cell.photo.image = UIImage(data: data)
+               }
+               } else{
+                   cell.photo.image = UIImage(named: "NewUser.jpg")
+               }
+               
+           }//DispatchQueue.global().async
+        
 
         return cell
     }
@@ -62,9 +68,10 @@ class PhotoController: UICollectionViewController,  UICollectionViewDelegateFlow
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(identifier: "FriendsPhotoViewController") as! FriendsPhotoViewController
-     viewController.friend = tmpFriend
-       tmpImage = UIImage(named:tmpFriend!.photoArray[indexPath.row]) 
+    // viewController.friend = tmpFriend
+    //    tmpImage = UIImage(named:(photoArray![indexPath.row]))
         viewController.indexImage = indexPath.row
+        viewController.indexText = tmpFriend?.userName
      self.navigationController?.pushViewController(viewController, animated: true)
           }
     
@@ -93,15 +100,6 @@ class PhotoController: UICollectionViewController,  UICollectionViewDelegateFlow
     @IBAction func likeButtonPressed(_ sender: Any) {
         (sender as! LikeButton).like()
     }
-    
-
-    
+        
 }// class PhotoController
-/*
-extension PhotoController: UICollectionViewDelegate, UICollectionViewDataSource {
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return photoCollection.images.count ?? 0
-    }
-    
-}//extension PhotoController: UICollectionViewDelegate, UICollectionViewDataSource {
-*/
+

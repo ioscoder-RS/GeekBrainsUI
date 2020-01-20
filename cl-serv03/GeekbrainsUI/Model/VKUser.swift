@@ -11,17 +11,19 @@
 // MARK: - Response
 struct VKUser: Codable {
      var userName:String
+    var firstName:String
      var avatarPath:String
      var isOnline:Int
      var id:Int
-     var photoArray:[String]?
+  
     
     enum CodingKeys: String, CodingKey {
         case userName = "last_name"
+        case firstName = "first_name"
         case avatarPath = "photo_50"
         case isOnline = "online"
         case id
-        case photoArray
+    
 }
 }
 
@@ -35,4 +37,5 @@ struct UserResponseData: Codable {
     let items: [VKUser]
 }
 
-var myVKUser: [VKUser] = [VKUser(userName: "", avatarPath: "", isOnline: 0, id: 0, photoArray:[])]
+var myVKUser = [VKUser]()
+//var myVKUser: [VKUser] = [VKUser(userName: "", avatarPath: "", isOnline: 0, id: 0)]

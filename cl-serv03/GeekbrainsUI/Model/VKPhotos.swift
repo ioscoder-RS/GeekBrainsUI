@@ -12,7 +12,7 @@ import Foundation
 // MARK: - Item
 struct VKPhoto: Codable {
     let id, albumID, ownerID: Int
- //   let sizes: [Size]
+    let sizes: [Size]
     let text: String
     let date: Int
 
@@ -20,7 +20,7 @@ struct VKPhoto: Codable {
         case id
         case albumID = "album_id"
         case ownerID = "owner_id"
-       // case sizes
+        case sizes
         case text, date
     }
 }
@@ -43,3 +43,5 @@ struct PhotosResponseData: Codable {
     let count: Int
     let items: [VKPhoto]
 }
+
+var myPhotos = [VKPhoto]()
