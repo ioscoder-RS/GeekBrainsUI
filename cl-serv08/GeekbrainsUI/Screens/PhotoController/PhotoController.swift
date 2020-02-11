@@ -60,7 +60,7 @@ class PhotoController: UICollectionViewController, PhotoListView,  UICollectionV
         //       self.selectedSong = songs[indexPath.row]
         let theAttributes:UICollectionViewLayoutAttributes! = collectionView.layoutAttributesForItem(at: indexPath)
         selectedFrame = collectionView.convert(theAttributes.frame, to: collectionView.superview)
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
+   //     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
         
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

@@ -38,13 +38,13 @@ let id: Int
                         method: .post,
                         parameters: params).responseData { (response) in
                           
-                          guard let data = response.value else{
+                            guard response.value != nil else{
                               return
                           }
                           
      
                           
-                           let responseString = String(bytes: response.data!, encoding: .utf8)
+                            _ = String(bytes: response.data!, encoding: .utf8)
                            let jsonObject = try? JSONSerialization.jsonObject(with: response.value!, options: .mutableContainers)
                            
                            let json = jsonObject as! [String: Any]

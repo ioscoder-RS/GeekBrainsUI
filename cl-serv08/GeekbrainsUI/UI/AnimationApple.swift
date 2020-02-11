@@ -42,20 +42,21 @@ class AnimationApple: UIView {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
 
+        /*
         let firstBirdLayer = CAShapeLayer()
        // firstBirdLayer.path = firstBirdPath.cgPath
         
-        /*
+        
         firstBirdLayer.strokeColor = UIColor.systemTeal.cgColor
         firstBirdLayer.backgroundColor = UIColor.systemTeal.cgColor
         firstBirdLayer.lineWidth = 3
         layer.addSublayer(firstBirdLayer)
  */
- 
+ /*
         let secondBirdLayer = CAShapeLayer()
        // secondBirdLayer.path = secondBirdPath.cgPath
    
-        /*
+        
         secondBirdLayer.strokeColor = UIColor.systemTeal.cgColor
         secondBirdLayer.backgroundColor = UIColor.systemTeal.cgColor
         secondBirdLayer.lineWidth = 3

@@ -57,7 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                })
                  Realm.Configuration.defaultConfiguration = config
         
-               print(config.fileURL)
+        print(config.fileURL!)
     }
 
 }

@@ -29,15 +29,15 @@ extension UIView{
      
             
             
-            var strokeAnimationStart = CABasicAnimation(keyPath: "strokeStart")
+            let strokeAnimationStart = CABasicAnimation(keyPath: "strokeStart")
             strokeAnimationStart.fromValue = 0
             strokeAnimationStart.toValue = 1.0
             
-            var strokeAnimationEnd = CABasicAnimation(keyPath: "strokeEnd")
+            let strokeAnimationEnd = CABasicAnimation(keyPath: "strokeEnd")
             strokeAnimationEnd.fromValue = 0
             strokeAnimationEnd.toValue = 1.2
             
-            var groupAnimation = CAAnimationGroup()
+            let groupAnimation = CAAnimationGroup()
             groupAnimation.duration = 1.0
             groupAnimation.animations = [strokeAnimationStart, strokeAnimationEnd]
             groupAnimation.autoreverses = true

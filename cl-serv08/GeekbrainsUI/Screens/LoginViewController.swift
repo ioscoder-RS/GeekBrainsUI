@@ -131,7 +131,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate //для фок
         ref.observe(.value) { (snapshot) in
             for node in snapshot.children {
                 if let object = node as? DataSnapshot {
-                    print(object.value)
+                    print(object.value!)
                     
                     if let user = UserFirebase(snapshot: object){
                         self.users.append(user)

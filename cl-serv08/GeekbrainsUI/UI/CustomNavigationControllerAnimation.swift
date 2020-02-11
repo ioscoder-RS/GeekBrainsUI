@@ -16,6 +16,7 @@ class CustomNavigationControllerAnimation: UINavigationController, UINavigationC
         case .pop: return CustomPopAnimator()
         case .push: return CustomPushAnimator()
         case .none: return nil
+        @unknown default: return nil
         }
     }//func
 

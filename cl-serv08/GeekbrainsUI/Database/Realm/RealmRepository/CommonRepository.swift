@@ -13,7 +13,6 @@ class CommonRepository {
     
     func getAllfromTable<T: Object> (vkObject: VKObjects) throws -> Results<T>{
         var object:Object.Type
-        var tmpdefault:Results<Object>
         
         let realm = try Realm()
         switch vkObject{
