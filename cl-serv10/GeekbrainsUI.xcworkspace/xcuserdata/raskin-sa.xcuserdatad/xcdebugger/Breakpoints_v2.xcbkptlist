@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "F22FD70F-A4F4-4A7B-A38F-4E725CE16F45"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CA415BC9-22B0-4856-963C-CE7276F86C7A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GeekbrainsUI/Model/VKApi.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "getLogin(token:loginId:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CA415BC9-22B0-4856-963C-CE7276F86C7A - e7061d32076decec"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GeekbrainsUI.VKAPi.getLogin(token: Swift.String, loginId: Swift.String, completion: (Swift.Result&lt;Swift.Array&lt;GeekbrainsUI.VKLogin&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "GeekbrainsUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/raskin-sa/GeekBrainsUIRepository/!main%20project/GeekbrainsUI/Model/VKApi.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "122"
+                  endingLineNumber = "122"
+                  offsetFromSymbolStart = "672">
+               </Location>
+               <Location
+                  uuid = "CA415BC9-22B0-4856-963C-CE7276F86C7A - 70bc29347b743ed6"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;GeekbrainsUI.VKLogin&gt;, Swift.Error&gt;) -&gt; () in GeekbrainsUI.VKAPi.getLogin(token: Swift.String, loginId: Swift.String, completion: (Swift.Result&lt;Swift.Array&lt;GeekbrainsUI.VKLogin&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "GeekbrainsUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/raskin-sa/GeekBrainsUIRepository/!main%20project/GeekbrainsUI/Model/VKApi.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "122"
+                  endingLineNumber = "122"
+                  offsetFromSymbolStart = "59">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DE9888FB-9D44-4B55-8E74-3843E2781610"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GeekbrainsUI/Model/VKApi.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "sendRequestNoCount(url:method:params:webRequestEntity:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
